@@ -7,7 +7,7 @@ interface Props {
   scale: number;
 }
 
-export function PanelRenderer({ segment, params, scale }: Props) {
+export function PanelRenderer({ segment, scale }: Props) {
   const selectedPanelId = useStore(s => s.selectedPanelId);
   const setSelectedPanelId = useStore(s => s.setSelectedPanelId);
 

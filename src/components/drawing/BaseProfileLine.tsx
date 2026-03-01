@@ -32,12 +32,6 @@ function SideMountProfile({ x1, x2, y, profileH, scale }: { x1: number; x2: numb
     brackets.push(bx);
   }
 
-  // Wall sits behind the glass at the bottom (y + profileH is floor level)
-  // The wall runs vertically from panel top to floor
-  const wallX = x2 + 12;  // wall line just to the right edge
-  const wallTop = -10;
-  const wallBottom = y + profileH + 5;
-
   return (
     <g>
       {/* Vertical wall surface behind glass (thick line on the back side) */}
