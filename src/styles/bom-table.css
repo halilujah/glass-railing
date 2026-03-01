@@ -1,0 +1,71 @@
+.bom-container {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.bom-section {
+  margin-bottom: 24px;
+}
+
+.bom-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.bom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.bom-table th {
+  background: #3c3c3c;
+  color: white;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.bom-table th.num {
+  text-align: right;
+}
+
+.bom-table td {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.bom-table td.num {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.bom-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.bom-table tr:last-child td {
+  border-bottom: none;
+}
+
+.bom-table tr:hover {
+  background: var(--color-primary-light);
+}
+
+.bom-total-row td {
+  font-weight: 700;
+  background: var(--color-bg) !important;
+  border-top: 2px solid var(--color-border);
+}

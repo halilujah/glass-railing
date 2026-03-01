@@ -1,0 +1,154 @@
+.drawing-viewport {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  background:
+    radial-gradient(circle, var(--color-border-light) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.drawing-viewport:active {
+  cursor: grabbing;
+}
+
+.drawing-viewport svg {
+  display: block;
+}
+
+.zoom-controls {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 4px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 4px;
+  box-shadow: var(--shadow-md);
+}
+
+.zoom-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.zoom-btn:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Panel rectangles */
+.glass-panel-rect {
+  fill: var(--color-panel-fill);
+  stroke: var(--color-panel-stroke);
+  stroke-width: 1;
+  cursor: pointer;
+  transition: fill 0.1s;
+}
+
+.glass-panel-rect:hover {
+  fill: var(--color-panel-hover);
+}
+
+.glass-panel-rect.selected {
+  fill: var(--color-panel-selected);
+  stroke: var(--color-primary);
+  stroke-width: 2;
+}
+
+/* Dimension lines */
+.dim-line {
+  stroke: #555;
+  stroke-width: 0.5;
+}
+
+.dim-extension {
+  stroke: #555;
+  stroke-width: 0.3;
+}
+
+.dim-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: #333;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.dim-text-bg {
+  fill: rgba(255, 255, 255, 0.85);
+}
+
+/* Labels */
+.panel-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  fill: #1a5276;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+  font-weight: 600;
+}
+
+.segment-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  fill: var(--color-text-secondary);
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+/* Base profile */
+.base-profile-line {
+  stroke: #6d4c2a;
+  stroke-width: 3;
+  fill: none;
+}
+
+.base-profile-fill {
+  fill: #d4a574;
+  opacity: 0.3;
+}
+
+/* Corner annotation */
+.corner-arc {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1;
+  stroke-dasharray: 4 2;
+}
+
+.corner-label {
+  font-size: 11px;
+  fill: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Drawing info overlay */
+.drawing-info {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.drawing-info strong {
+  color: var(--color-text);
+}
